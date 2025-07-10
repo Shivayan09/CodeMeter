@@ -32,8 +32,8 @@ const CodeforcesStats = () => {
 
     return (
         <div className='relative'>
-            <div className="flex justify-evenly h-[200vh] md:h-[100vh] flex-col md:flex-row gap-10">
-                <div className="box h-[35%] md:h-[90%] w-[90%] md:w-[30%] my-auto mx-auto p-5 flex flex-col gap-5">
+            <div className="flex justify-evenly h-[150vh] md:h-[100vh] flex-col md:flex-row gap-10">
+                <div className="box h-[50%] md:h-[90%] w-[90%] md:w-[30%] my-auto mx-auto p-5 flex flex-col gap-5 border border-black">
                     <div className="header flex justify-center items-center bg-gradient-to-r from-indigo-600 to-sky-600 bg-clip-text text-transparent font-bold text-[1.5rem] uppercase font-serif">
                         <TrueFocus
                             sentence="Codeforces Stats"
@@ -46,7 +46,7 @@ const CodeforcesStats = () => {
                         />
                     </div>
                     <div className='flex items-center justify-center'>
-                        <img src={cf_logo} alt="" className='h-28' />
+                        <img src={cf_logo} alt="" className='h-20 md:h-28' />
                     </div>
                     <div className="flex justify-center items-center mt-7">
                         <input
@@ -66,7 +66,7 @@ const CodeforcesStats = () => {
                     {error && <p className="text-red-500 text-center">{error}</p>}
                 </div>
 
-                <div className="box h-[80%] md:h-[90%] w-[90%] md:w-[65%] my-auto mx-auto p-6 overflow-y-auto">
+                <div className="box h-[45%] border border-black md:h-[90%] w-[90%] md:w-[65%] my-auto mx-auto p-6 overflow-y-auto">
                     {data ? (
                         <div className="flex flex-col gap-8">
                             {data?.avatar && (
