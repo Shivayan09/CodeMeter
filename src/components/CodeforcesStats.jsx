@@ -76,7 +76,7 @@ const CodeforcesStats = () => {
                                 </div>
                             )}
 
-                            <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
+                            <div className="flex flex-col mx-auto md:flex-row flex-wrap md:grid-cols-3 gap-20 justify-center">
                                 <Stat label="Handle" value={data.handle} />
                                 <Stat label="Rating" value={data.rating} />
                                 <Stat label="Max Rating" value={data.maxRating} />
