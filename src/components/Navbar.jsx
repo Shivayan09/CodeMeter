@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 const Navbar = () => {
     return (
         <div className='relative z-0 bg-white'>
-            <div className='h-[20vh] md:h-[11vh] w-[95vw] p-5 shadow-xl shadow-black/10 m-5 rounded-xl mx-auto'>
+            <div className='h-[16vh] md:h-[11vh] w-[95vw] p-5 shadow-xl shadow-black/10 md:m-5 rounded-xl mx-auto'>
                 <div className="content h-full flex items-center justify-between flex-col md:flex-row">
                     <div className="name flex items-center"><p className='bg-gradient-to-r from-indigo-600 to-sky-600 bg-clip-text text-transparent font-bold text-[1.5rem]'>Codemetric</p></div>
                     <div>
