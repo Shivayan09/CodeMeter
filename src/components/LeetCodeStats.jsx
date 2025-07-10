@@ -63,8 +63,8 @@ const LeetCodeStats = () => {
 
   return (
     <div className='relative'>
-      <div className="flex justify-evenly h-[200vh] md:h-[100vh] flex-col md:flex-row gap-10">
-        <div className="box h-[35%] md:h-[90%] w-[90%] md:w-[30%] my-auto mx-auto p-5 flex flex-col gap-5">
+      <div className="flex justify-evenly h-[150vh] md:h-[100vh] flex-col md:flex-row gap-10">
+        <div className="box h-[50%] md:h-[90%] w-[90%] md:w-[30%] my-auto mx-auto p-5 flex flex-col gap-5">
           <div
             className="header flex justify-center items-center bg-gradient-to-r from-indigo-600 to-sky-600 bg-clip-text text-transparent font-bold text-[1.5rem] uppercase font-serif"
             style={{ wordSpacing: '0.5rem' }}
@@ -100,12 +100,12 @@ const LeetCodeStats = () => {
           {error && <p className="text-red-500 text-center">{error}</p>}
         </div>
 
-        <div className="box h-[80%] md:h-[90%] w-[90%] md:w-[65%] my-auto mx-auto p-6 overflow-y-auto">
+        <div className="box h-[45%] md:h-[90%] w-[90%] md:w-[65%] my-auto mx-auto p-6 md:overflow-y-auto">
           {data ? (
             <div>
               <LeetCodeCharts data={data} />
-              <div className='mt-16'>
-                <div className="button bg-gradient-to-r from-indigo-600 to-sky-400 text-white h-14 w-[20vw] mx-auto rounded-2xl flex items-center justify-center hover:cursor-pointer 
+              <div className='mt-14'>
+                <div className="button bg-gradient-to-r from-indigo-600 to-sky-400 text-white h-14 w-full md:w-[20vw] mx-auto rounded-2xl flex items-center justify-center hover:cursor-pointer 
                 transition-all duration-300 hover:scale-[1.02]" onClick={() => setAnalysis(true)}>
                   {analysis ? 'Analysis' : 'Get Analysis'}
                 </div>

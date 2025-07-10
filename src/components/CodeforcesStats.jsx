@@ -66,7 +66,7 @@ const CodeforcesStats = () => {
                     {error && <p className="text-red-500 text-center">{error}</p>}
                 </div>
 
-                <div className="box h-[45%] md:h-[90%] w-[90%] md:w-[65%] my-auto mx-auto p-6 overflow-y-auto">
+                <div className="box h-[45%] md:h-[90%] w-[90%] md:w-[65%] my-auto mx-auto p-6 md:overflow-y-auto">
                     {data ? (
                         <div className="flex flex-col gap-8">
                             {data?.avatar && (
