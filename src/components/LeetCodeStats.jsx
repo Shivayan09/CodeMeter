@@ -3,7 +3,7 @@ import { fetchLeetcodeStats } from '../api/Leetcode';
 import Grid from './Grid';
 import LeetCodeCharts from './LeetCodeCharts';
 import TiltedCard from './TiltedCard';
-import lc_logo from '../assets/lc-logo.png'
+import lc_logo from '../assets/Lc-logo.png'
 import noData_logo from '../assets/noData.png'
 import noData2_logo from '../assets/noData2.png'
 import TrueFocus from './TrueFocus';
