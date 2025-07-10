@@ -1,0 +1,8 @@
+@import "tailwindcss";
+
+.recharts-sector:focus,
+.recharts-rectangle:focus,
+.recharts-surface:focus {
+  outline: none !important;
+  stroke: none !important;
+}

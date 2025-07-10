@@ -1,0 +1,97 @@
+import React, { useState } from 'react';
+import { fetchCodechefData } from '../api/Codechef';
+import TrueFocus from './TrueFocus';
+import cc_logo from '../assets/cchef-logo.png';
+import noData2_logo from '../assets/noData2.png';
+
+const CodechefStats = () => {
+  const [handle, setHandle] = useState('');
+  const [data, setData] = useState(null);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState('');
+
+  const handleFetch = async () => {
+    if (!handle.trim()) {
+      setError('Please enter a CodeChef handle');
+      return;
+    }
+    setLoading(true);
+    setError('');
+    setData(null);
+    try {
+      const result = await fetchCodechefData(handle.trim());
+      setData(result);
+    } catch (err) {
+      setError(err.message || 'Error fetching CodeChef data');
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  return (
+    <div className="relative">
+      <div className="flex justify-evenly h-[200vh] md:h-[100vh] flex-col md:flex-row gap-10">
+        <div className="box h-[35%] md:h-[90%] w-[90%] md:w-[30%] my-auto mx-auto p-5 flex flex-col gap-5">
+          <div className="header flex justify-center items-center bg-gradient-to-r from-indigo-600 to-sky-600 bg-clip-text text-transparent font-bold text-[1.5rem] uppercase font-serif">
+            <TrueFocus
+              sentence="CodeChef Stats"
+              manualMode={false}
+              blurAmount={2}
+              borderColor="#0ea5e9"
+              glowColor="rgba(14,165,233,0.6)"
+              animationDuration={0.5}
+              pauseBetweenAnimations={1}
+            />
+          </div>
+          <div className="flex items-center justify-center">
+            <img src={cc_logo} alt="CodeChef Logo" className="h-28" />
+          </div>
+          <div className="flex justify-center items-center mt-7">
+            <input
+              type="text"
+              value={handle}
+              onChange={(e) => setHandle(e.target.value)}
+              className="bg-gray-100 shadow-md outline-none text-black p-2 rounded-xl w-[90%] text-center h-12"
+              placeholder="Enter your CodeChef handle"
+            />
+          </div>
+          <div
+            onClick={handleFetch}
+            className="bg-gradient-to-r from-indigo-600 to-sky-400 hover:cursor-pointer w-[90%] mx-auto h-10 text-white flex justify-center items-center rounded-xl"
+          >
+            {loading ? 'Loading...' : 'Fetch Stats'}
+          </div>
+          {error && <p className="text-red-500 text-center">{error}</p>}
+        </div>
+
+        <div className="box h-[80%] md:h-[90%] w-[90%] md:w-[65%] my-auto mx-auto p-6 overflow-y-auto">
+          {data ? (
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-6 text-center">
+              <Stat label="Handle" value={data.username || handle} />
+              <Stat label="Rating" value={data.rating} />
+              <Stat label="Stars" value={data.stars} />
+              <Stat label="Global Rank" value={data.global_rank} />
+              <Stat label="Country Rank" value={data.country_rank} />
+              <Stat label="Contests Attended" value={data.contestsAttended} />
+              <Stat label="Problems Solved" value={data.problemsSolved} />
+            </div>
+          ) : (
+            <div className="text-center text-sky-800 text-[1.2rem] flex items-center justify-center flex-col">
+              {loading ? 'Fetching data...' : 'Enter a handle first to see stats'}
+              <img src={noData2_logo} alt="" className="h-[50vh] md:h-[70vh]" />
+            </div>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const Stat = ({ label, value }) => (
+  <div className="flex flex-col items-center h-20 w-52 md:w-40 bg-sky-100 hover:cursor-pointer hover:bg-sky-200 transition-all hover:scale-[1.01] hover:shadow-xl shadow-md bg-opacity-10 p-3 rounded-lg">
+    <p className="text-[1.35rem] font-bold">{value !== undefined ? value : "—"}</p>
+    <p className="text-sm text-cyan-900">{label}</p>
+  </div>
+);
+
+export default CodechefStats;
