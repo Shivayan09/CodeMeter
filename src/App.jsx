@@ -10,6 +10,7 @@ import Grid from './components/Grid';
 import LeetCode from './pages/LeetCode';
 import CodeForces from './pages/CodeForces';
 import Codechef from './pages/Codechef';
+import { Analytics } from "@vercel/analytics/next"
 
 function App() {
   const router = createBrowserRouter(
