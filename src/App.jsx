@@ -16,58 +16,58 @@ function App() {
   const router = createBrowserRouter(
     [
       {
-        path:'/',
+        path: '/',
         element:
-        <div>
-          <Grid/>
-          <Navbar/>
-          <Home/>
-        </div>
+          <div>
+            <Grid />
+            <Navbar />
+            <Home />
+          </div>
       },
       {
-        path:'/stats',
+        path: '/stats',
         element:
-        <div>
-          <Grid/>
-          <Navbar/>
-          <CheckStats/>
-        </div>
+          <div>
+            <Grid />
+            <Navbar />
+            <CheckStats />
+          </div>
       },
       {
-        path:'/contact',
+        path: '/contact',
         element:
-        <div>
-          <Navbar/>
-          <Contact/>
-        </div>
+          <div>
+            <Navbar />
+            <Contact />
+          </div>
       },
       {
-        path:'/stats/leetcode',
+        path: '/stats/leetcode',
         element:
-        <div>
-          <LeetCode/>
-        </div>
+          <div>
+            <LeetCode />
+          </div>
       },
       {
-        path:'/stats/codeforces',
+        path: '/stats/codeforces',
         element:
-        <div>
-          <CodeForces/>
-        </div>
+          <div>
+            <CodeForces />
+          </div>
       },
       {
-        path:'/stats/codechef',
+        path: '/stats/codechef',
         element:
-        <div>
-          <Codechef/>
-        </div>
+          <div>
+            <Codechef />
+          </div>
       },
     ]
   )
 
   return (
     <div>
-      <RouterProvider router={router}/>
+      <RouterProvider router={router} />
     </div>
   )
 }
