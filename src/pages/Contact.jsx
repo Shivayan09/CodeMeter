@@ -5,7 +5,7 @@ import Navbar from '../components/Navbar'
 
 const Contact = () => {
   return (
-    <div className='-mt-22'>
+    <div className='-mt-26 md:-mt-22'>
       <Grid/>
       <Navbar/>
       <ContactBox/>
