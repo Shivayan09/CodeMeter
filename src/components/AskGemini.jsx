@@ -39,14 +39,14 @@ const AskGemini = () => {
 
     return (
         <div className='relative'>
-            <div className='h-[80vh] w-[80vw] flex mx-auto'>
-                <div className="box w-[40%] flex flex-col justify-center items-center">
-                    <div className="header text-center m-5 text-[1.4rem] font-serif bg-gradient-to-r from-indigo-600 to-sky-600 bg-clip-text text-transparent font-semibold leading-10" style={{ wordSpacing: '0.7rem' }}>"Ask me your doubts <br /> regarding coding"</div>
+            <div className='h-[80vh] w-[90vw] md:w-[80vw] flex flex-col md:flex-row mx-auto items-center'>
+                <div className="box w-[100%] md:w-[40%] flex flex-col justify-center items-center h-[40%] md:h-[100%]">
+                    <div className="header text-center m-5 text-[1rem] md:text-[1.4rem] font-serif bg-gradient-to-r from-indigo-600 to-sky-600 bg-clip-text text-transparent font-semibold leading-10" style={{ wordSpacing: '0.7rem' }}>"Ask me your doubts <br /> regarding coding"</div>
                     <div className="image">
                         <motion.img
                             src={ai_logo}
                             alt=""
-                            className="h-[60vh]"
+                            className="h-[20vh] md:h-[60vh]"
                             animate={{
                                 y: [0, -10, 0],
                             }}
@@ -59,7 +59,7 @@ const AskGemini = () => {
                         />
                     </div>
                 </div>
-                <div className="box w-[60%]">
+                <div className="box w-[100%] md:w-[60%] h-[100%] md:h-[100%]">
                     <div className="gemini mx-3 h-[30%]">
                         <input type="text" value={ques} onChange={(event) => setQues(event.target.value)} placeholder='Enter your doubt here' className='h-[9vh] w-full bg-white/20 border-gray-600/60 rounded-xl shadow-xl p-3 mb-2 outline-none' />
                         <div className="button h-[7vh] transition-all hover:scale-[1.005] hover:cursor-pointer hover:bg-white/70 flex items-center justify-center border-indigo-600 border-2 shadow-xl rounded-2xl text-gray-700"
