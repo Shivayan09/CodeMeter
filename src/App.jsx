@@ -11,6 +11,7 @@ import LeetCode from './pages/LeetCode';
 import CodeForces from './pages/CodeForces';
 import Codechef from './pages/Codechef';
 import { Analytics } from "@vercel/analytics/react"
+import AskGemini from './components/AskGemini';
 
 function App() {
   const router = createBrowserRouter(
@@ -62,6 +63,15 @@ function App() {
             <Codechef />
           </div>
       },
+      {
+        path: '/ai',
+        element:
+        <div>
+          <Grid/>
+          <Navbar/>
+          <AskGemini/>
+        </div>
+      }
     ]
   )
 

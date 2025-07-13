@@ -1,8 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
 import img1 from '../assets/home-img1.png';
 import img2 from '../assets/home-img2.png';
 import { useNavigate } from 'react-router-dom';
 import RotatingText from '../components/RotatingText';
+import { URL } from '../constants';
 
 const Home = () => {
     const navigate = useNavigate();

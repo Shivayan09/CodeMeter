@@ -49,6 +49,19 @@ const Navbar = () => {
                             </li>
                             <li className='hover:cursor-pointer h-full'>
                                 <NavLink
+                                    to="/ai"
+                                    className={({ isActive }) =>
+                                        `transition-all duration-200 ease-in-out ${isActive
+                                            ? 'bg-sky-100 p-3 rounded-xl text-blue-500 shadow-md'
+                                            : 'hover:bg-sky-50 hover:text-blue-400 p-3 rounded-xl'
+                                        }`
+                                    }
+                                >
+                                    Ask CodeBot
+                                </NavLink>
+                            </li>
+                            <li className='hover:cursor-pointer h-full'>
+                                <NavLink
                                     to="/contact"
                                     className={({ isActive }) =>
                                         `transition-all duration-200 ease-in-out ${isActive
