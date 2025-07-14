@@ -69,10 +69,22 @@ const AskGemini = () => {
                     </div>
                     <div className="div shadow-xl rounded-2xl mx-3 -mt-3 flex items-center justify-center h-[70%]">
                         <div className=" flex justify-center result text-center overflow-y-auto w-full px-5 rounded-2xl text-[1.1rem] text-gray-700/80 font-serif" style={{ maxHeight: '100%' }}>
-                            {result ? result : <div>
-                                <p>Your result will appear here</p>
-                                <img src={no_task} alt="" className='h-[45vh] mx-auto' />
-                            </div>}
+                            {loading ? (
+                                <motion.div
+                                    className="w-10 h-10 border-2 border-indigo-500 border-t-transparent rounded-full animate-spin"
+                                    initial={{ rotate: 0 }}
+                                    animate={{ rotate: 360 }}
+                                    transition={{ repeat: Infinity, duration: 0.5, ease: "linear" }}
+                                ></motion.div>
+                            ) : result ? (
+                                result
+                            ) : (
+                                <div>
+                                    <p>Your result will appear here</p>
+                                    <img src={no_task} alt="" className='h-[45vh] mx-auto' />
+                                </div>
+                            )}
+
                         </div>
                     </div>
 
