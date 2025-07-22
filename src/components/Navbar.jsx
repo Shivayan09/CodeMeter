@@ -18,7 +18,7 @@ const Navbar = () => {
     }, []);
     return (
         <div className='fixed z-50 bg-white w-full'>
-            <div className='h-[10vh] md:h-[11vh] w-[95vw] p-5 shadow-xl shadow-black/10 rounded-xl mx-auto'>
+            <div className='h-[10vh] md:h-[11vh] w-[95vw] p-5 shadow-xl shadow-black/10 rounded-xl mx-auto mt-5 border border-cyan-400'>
                 <div className="content h-full flex items-center justify-between flex-row">
                     <div className="name flex items-center"><p className='bg-gradient-to-r from-indigo-600 to-sky-600 bg-clip-text text-transparent font-bold text-[1rem] md:text-[1.5rem]'>Codemetric</p></div>
                     <div>
