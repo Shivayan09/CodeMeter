@@ -18,7 +18,7 @@ const Platforms = () => {
   }
   return (
     <div className='relative'>
-      <div className='h-[150vh] md:h-[75vh] gap-5 md:gap-0 flex flex-col md:flex-row w-[95vw] mx-auto p-2 justify-evenly'>
+      <div className='h-[150vh] md:h-[75vh] gap-5 md:gap-0 flex flex-col md:flex-row w-[95vw] mx-auto p-2 justify-evenly mt-120 md:mt-16'>
         <div className="platforms h-full w-[90%] mx-auto md:w-[25%]">
           <div className="header font-semibold text-sky-600 bg-clip-text text-[1.5rem] text-center font-sans m-5">Explore platforms</div>
           <div className="boxes flex gap-14 md:gap-10 flex-col mt-7">

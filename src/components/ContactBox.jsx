@@ -47,7 +47,7 @@ export default function Contact() {
 
     return (
         <div className='flex justify-center items-center relative mt-10 md:mt-0'>
-            <div className='bg-white shadow-xl shadow-sky-700/10 border-1 border-sky-700/30 p-8 rounded-3xl w-[85vw] md:w-[30vw]'>
+            <div className='bg-white shadow-xl shadow-sky-700/10 border-1 border-sky-700/30 p-8 rounded-3xl w-[85vw] md:w-[30vw] mt-24'>
                 <h2 className='bg-gradient-to-r from-indigo-600 to-sky-600 bg-clip-text text-transparent font-bold text-3xl text-center mb-6'>Contact Us</h2>
                 <form onSubmit={handleSubmit} className='flex flex-col gap-4 text-black'>
                     <input

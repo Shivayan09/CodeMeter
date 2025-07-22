@@ -38,8 +38,8 @@ const AskGemini = () => {
     };
 
     return (
-        <div className='relative'>
-            <div className='h-[80vh] w-[90vw] md:w-[80vw] flex flex-col md:flex-row mx-auto items-center'>
+        <div className='relative z-10 h-[100vh] flex items-center justify-center'>
+            <div className='h-[80vh] w-[90vw] md:w-[80vw] flex flex-col md:flex-row mx-auto items-center mt-10'>
                 <div className="box w-[100%] md:w-[40%] flex flex-col justify-center items-center h-[40%] md:h-[100%]">
                     <div className="header text-center m-5 text-[1rem] md:text-[1.4rem] font-serif bg-gradient-to-r from-indigo-600 to-sky-600 bg-clip-text text-transparent font-semibold leading-10" style={{ wordSpacing: '0.7rem' }}>"Ask me your doubts <br /> regarding coding"</div>
                     <div className="image">

@@ -11,9 +11,9 @@ const Home = () => {
         navigate('/stats')
     }
     return (
-        <div className='relative z-10'>
+        <div className='relative z-10 h-[100vh] flex items-center justify-center'>
             <div className='h-[80vh] md:h-[73vh] md:m-5 flex items-center flex-col md:flex-row'>
-                <div className="box h-[100%] w-[100%] md:w-[50%] flex items-center justify-center p-5">
+                <div className="box h-[100%] w-[100%] md:w-[50%] relative z-10 flex items-center justify-center p-5">
                     <img src={img2} alt="" />
                 </div>
                 <div className="box h-[100%] w-[100%] md:w-[50%] flex items-center md:items-start justify-center p-5 flex-col gap-10">
